@@ -20,6 +20,8 @@ public class PLayer : MonoBehaviour
 
     GameOverManager gameOverManager;
 
+  
+
 
 
     // Start is called before the first frame update
@@ -33,6 +35,8 @@ public class PLayer : MonoBehaviour
     {
         transform.Rotate(Vector3.forward * turnSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
     }
+
+
 
     public void TakeDame()
     {

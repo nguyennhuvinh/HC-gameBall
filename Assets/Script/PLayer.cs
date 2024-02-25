@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PLayer : MonoBehaviour
 {
-
+    public static PLayer Instance { get; private set; }
 
     public float turnSpeed;
 
@@ -20,7 +20,18 @@ public class PLayer : MonoBehaviour
 
     GameOverManager gameOverManager;
 
-  
+    private void Awake()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
 
 
 
